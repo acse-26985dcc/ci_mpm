@@ -16,7 +16,6 @@ class TestSimpleFunctions(object):
         isum = my_sum(iterable)
         assert isum == expected
 
-
     @pytest.mark.parametrize('number, expected', [
         (5, 120),
         (3, 6),

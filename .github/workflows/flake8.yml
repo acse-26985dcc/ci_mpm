@@ -10,21 +10,22 @@ on:
      branches:
        - master
 
-jobs:
+jobs: # each job will run on different VM
   flake8:
 
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
+    # pull the respo we are working onto the lcoal VM and checkouts the branch we are working on
 
-    - name: Set up Python 3.9
+    - name: Set up Python 3.9 # name for a step, explaining
       uses: actions/setup-python@v1
       with:
         python-version: 3.9
 
     - name: Install dependencies
-      run: |
+      run: | # use the scripting language, linux machine, bash script
         pip install --upgrade pip
         pip install flake8
 
